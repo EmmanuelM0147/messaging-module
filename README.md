@@ -13,3 +13,5 @@ python twilio_send.py --channel sms --to +15551234567 --message "Hello"
 ```
 
 Do not commit `.env`. Copy `twilio-messaging-cli/.env.example` and fill in the four `TWILIO_*` variables.
+
+GitHub Actions runs the mocked pytest suite on every push. No Twilio credentials are used in CI.
