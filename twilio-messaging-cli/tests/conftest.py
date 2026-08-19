@@ -21,14 +21,14 @@ def isolated_env(monkeypatch: pytest.MonkeyPatch) -> MagicMock:
 
     client = MagicMock(name="TwilioClient")
     client.messages.create.side_effect = AssertionError(
-        "unmocked Twilio API call — tests must not hit the network"
+        "unmocked Twilio API call - tests must not hit the network"
     )
     monkeypatch.setattr("twilio_send.build_client", lambda: client)
     monkeypatch.setattr(
         "twilio_send.Client",
         MagicMock(
             side_effect=AssertionError(
-                "unmocked Twilio Client() — tests must not hit the network"
+                "unmocked Twilio Client() - tests must not hit the network"
             )
         ),
     )

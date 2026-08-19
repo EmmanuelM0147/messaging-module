@@ -8,7 +8,7 @@ CLI that sends one WhatsApp or SMS message through Twilio.
 - A Twilio account, Account SID, and Auth Token
 - `TWILIO_SMS_FROM`: an SMS-capable Twilio number
 - `TWILIO_WHATSAPP_FROM`: the WhatsApp sandbox or a WhatsApp-enabled sender
-- Recipients in E.164 (`+[country][subscriber]`, 8–15 digits after `+`)
+- Recipients in E.164 (`+[country][subscriber]`, 8-15 digits after `+`)
 
 Install:
 
@@ -85,8 +85,8 @@ The recipient must already have sent the join code (for example `join <your-sand
 
 Failure categories:
 
-- `invalid number` — local E.164 check failed, or Twilio rejected the number
-- `auth failure` — bad Account SID or Auth Token
-- `network timeout` — connect/read timeout or connection error (not retried; a second create can send a second message)
-- `unknown Twilio API error` — any other Twilio or unexpected error
-- `error: TWILIO_SMS_FROM is not set` — missing config (variable name changes)
+- `invalid number` - local E.164 check failed, or Twilio rejected the number
+- `auth failure` - bad Account SID or Auth Token
+- `network timeout` - connect/read timeout or connection error (not retried; a second create can send a second message)
+- `unknown Twilio API error` - any other Twilio or unexpected error
+- `error: TWILIO_SMS_FROM is not set` - missing config (variable name changes)
